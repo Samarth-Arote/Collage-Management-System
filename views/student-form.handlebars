@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Details Form</title>
+</head>
+<link rel="stylesheet" href="/std_form1.css">
+<body>
+  <div class="nav-links">
+            <ul>
+                <li align="left"><a href="/student-details">Next</a></li>
+                <li><a href="/" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="/course-form" onclick="showSection('course-form')">Courses</a></li>
+                <li><a href="/student-form" onclick="showSection('blog')">Students</a></li>
+                <li><a href="/contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+  <h2>Student Details Form</h2>
+  <form action="/student-details" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+    <div class="form-group">
+      <label for="grade">Grade:</label>
+      <input type="text" id="grade" name="grade" required>
+    </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>

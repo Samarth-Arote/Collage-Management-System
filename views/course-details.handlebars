@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details</title>
+  <link rel="stylesheet" href="/course-details.css">
+</head>
+<body>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="/course-form" onclick="showSection('course-form')">Courses</a></li>
+                <li><a href="/student-form" onclick="showSection('blog')">Students</a></li>
+                <li><a href="/contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+  <h2>Course Details</h2>
+  <h3>{{course.title}}</h3> 
+  <p>Seat availability {{course.description}}</p>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores deserunt non at veniam ut accusantium voluptas architecto minima blanditiis ab hic provident vel similique quod aspernatur facere, eligendi, iste vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt voluptate iure, suscipit facilis deleniti expedita itaque placeat aspernatur fuga a cum architecto, non veniam nostrum numquam vel obcaecati, fugit voluptas.</p>
+</body>
+</html>

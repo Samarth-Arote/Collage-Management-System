@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details Form</title>
+</head>
+<link rel="stylesheet" href="/course-form.css">
+<body>
+  <div class="nav-links">
+            <ul>
+                <li><a href="/" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="/course-form" onclick="showSection('course-form')">Courses</a></li>
+                <li><a href="/student-form" onclick="showSection('blog')">Students</a></li>
+                <li><a href="/contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+  <h2>Course Details Form</h2>
+  {{#each courses}}
+    <form action="/course-details" method="POST">
+      <input type="hidden" name="title" value="{{title}}">
+      <input type="hidden" name="description" value="{{description}}">
+      <h3>{{title}}</h3>
+      <p>{{description}}</p>
+      <div class="form-group">
+        <button type="submit">View Details</button>
+      </div>
+    </form>
+  {{/each}}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-Graduate Details Form</title>
+  <link rel="stylesheet" href="/post-graduate-form.css">
+</head>
+<body align="center">
+    <div class="nav-links">
+            <ul>
+                <li><a href="/" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="/course-form" onclick="showSection('course-form')">Courses</a></li>
+                <li><a href="/student-form" onclick="showSection('blog')">Students</a></li>
+                <li><a href="/contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+  <h2>Post-Graduate Details Form</h2>
+  
+  <form action="/post-graduate-details" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" name="degree" required>
+    </div>
+    <div class="form-group">
+      <label for="university">University:</label>
+      <input type="text" id="university" name="university" required>
+    </div>
+    <div class="form-group">
+      <label for="year">Year:</label>
+      <input type="number" id="year" name="year" required>
+    </div>
+    <div class="form-group">
+      <button type="submit">Save</button>
+    </div>
+  </form>
+
+  {{#if postGraduates.length}}
+    <h2>All Post-Graduate Details</h2>
+    <ul>
+      {{#each postGraduates}}
+      <li><hr>
+        <strong>Name:   </strong> {{name}}<br>
+        <strong>Degree: </strong> {{degree}}<br>
+        <strong>University:</strong> {{university}}<br>
+        <strong>Year:</strong> {{year}}
+      </li>
+      {{/each}}
+      <hr>
+    </ul>
+  {{else}}
+    <p>No post-graduates found.</p>
+  {{/if}}
+  
+</body>
+</html>
